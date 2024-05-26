@@ -8,6 +8,7 @@ import Dashboard from "../pages/Dashboard";
 import DashboardLayout from "../layouts/DashboardLayout";
 import ErrorPage from "../pages/ErrorPage";
 import ToyDetails from "../pages/ToyDetails";
+import AllProducts from "../pages/AllProducts";
 // import PrivateRoute from "./private/PrivateRoute";
 
  export const router = createBrowserRouter([
@@ -48,6 +49,10 @@ import ToyDetails from "../pages/ToyDetails";
         {
           path: "",
           element:<Dashboard/>
+        },
+        {
+          path: "/dashboard/all-products",
+          element:<AllProducts/>
         },
       ]
     },

@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 
 const DashboardLayout = () => {
@@ -17,7 +17,10 @@ const DashboardLayout = () => {
             <div className="flex-none hidden lg:block">
               <ul className="menu menu-horizontal">
                 {/* Navbar menu content here */}
-                <li><a>Navbar Item 1</a></li>
+                <li><Link to={""}>Dashboard</Link></li>
+                <li>
+                  <Link to={"/dashboard/all-products"}>All Products</Link>
+                  </li>
                 <li><a>Navbar Item 2</a></li>
               </ul>
             </div>

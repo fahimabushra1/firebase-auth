@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 const Product = ({toy}) => {
     const {id,name} = toy;
     return (
@@ -13,7 +14,7 @@ const Product = ({toy}) => {
     <p>{name}</p>
   </div>
     <div className="card-actions">
-      <button className="btn btn-primary"><Link to ={`/products/${id}`}>See Details</Link></button>
+      <button className="btn btn-primary mt-4"><Link to ={`/products/${id}`}>See Details</Link></button>
     </div>
   </div>
 </div>
