@@ -10,9 +10,14 @@ fetch("http://localhost:3000/toys/")
 .then(res=>res.json())
 .then(data=>setProducts(data));
     },[]);
+
+
+    const handleDeleteProduct = (id) =>{
+      setProducts(products.filter((product) => product.id!==id))
+    }
     return (
         <>
-            <h1>All Products</h1>
+            <h1 className="text-5xl text-center text-blue-500 my-8 font-bold">All Products</h1>
           <div className="overflow-x-auto">
             <table className="table">
               {/* head */}
@@ -27,7 +32,7 @@ fetch("http://localhost:3000/toys/")
                 </thead>
             <tbody>
                 {
-                    products?.map((product)=><SingleProduct key={product?.id} product={product}/>)
+                    products?.map((product)=><SingleProduct key={product?.id} product={product} onDelete={handleDeleteProduct}/>)
                 }
             </tbody>
             </table>

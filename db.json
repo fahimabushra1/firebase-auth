@@ -1,7 +1,7 @@
 {
-  "toys":[
+  "toys": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Stacking Rings",
       "category": "Educational",
       "brand": "Fisher-Price",
@@ -10,7 +10,7 @@
       "img": "https://tse4.explicit.bing.net/th?id=OIP.ZdQe3mtR0atNMEzwUfED9AHaGK&pid=Api&P=0&h=220"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Soft Blocks",
       "category": "Building",
       "brand": "Melissa & Doug",
@@ -19,7 +19,7 @@
       "img": "https://example.com/images/soft_blocks.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Musical Toy Drum",
       "category": "Musical",
       "brand": "VTech",
@@ -28,7 +28,7 @@
       "img": "https://example.com/images/musical_toy_drum.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Activity Gym",
       "category": "Activity",
       "brand": "Bright Starts",
@@ -37,16 +37,16 @@
       "img": "https://example.com/images/activity_gym.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Shape Sorter",
       "category": "Educational",
       "brand": "Playskool",
       "price": 15.99,
-      "age":"12-18 months",
+      "age": "12-18 months",
       "img": "https://example.com/images/shape_sorter.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Push Walker",
       "category": "Activity",
       "brand": "Hape",
@@ -55,7 +55,7 @@
       "img": "https://example.com/images/push_walker.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Baby Doll",
       "category": "Pretend Play",
       "brand": "Baby Alive",
@@ -64,7 +64,7 @@
       "img": "https://example.com/images/baby_doll.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Teething Toy",
       "category": "Teething",
       "brand": "Nuby",
@@ -73,7 +73,7 @@
       "img": "https://example.com/images/teething_toy.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Toy Car",
       "category": "Vehicles",
       "brand": "Hot Wheels",
@@ -82,7 +82,7 @@
       "img": "https://example.com/images/toy_car.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Bath Toys",
       "category": "Water Play",
       "brand": "Munchkin",
@@ -91,7 +91,7 @@
       "img": "https://example.com/images/bath_toys.jpg"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Plush Toy",
       "category": "Stuffed Animals",
       "brand": "Gund",
@@ -100,7 +100,7 @@
       "img": "https://example.com/images/plush_toy.jpg"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Wooden Puzzles",
       "category": "Educational",
       "brand": "Melissa & Doug",
@@ -109,7 +109,7 @@
       "img": "https://example.com/images/wooden_puzzles.jpg"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Interactive Book",
       "category": "Books",
       "brand": "LeapFrog",
@@ -118,7 +118,7 @@
       "img": "https://example.com/images/interactive_book.jpg"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Play Mat",
       "category": "Activity",
       "brand": "Tiny Love",
@@ -127,7 +127,7 @@
       "img": "https://example.com/images/play_mat.jpg"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Ride-On Toy",
       "category": "Vehicles",
       "brand": "Little Tikes",
@@ -136,7 +136,7 @@
       "img": "https://example.com/images/ride_on_toy.jpg"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Musical Mobile",
       "category": "Nursery",
       "brand": "Tiny Love",
@@ -145,7 +145,7 @@
       "img": "https://example.com/images/musical_mobile.jpg"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Crib Toy",
       "category": "Nursery",
       "brand": "Fisher-Price",
@@ -154,32 +154,13 @@
       "img": "https://example.com/images/crib_toy.jpg"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Rattle",
       "category": "Teething",
       "brand": "Fisher-Price",
       "price": 8.99,
       "age": "0-6 months",
       "img": "https://example.com/images/rattle.jpg"
-    },
-    {
-      "id": 19,
-      "name": "Ball Pit",
-      "category": "Activity",
-      "brand": "Intex",
-      "price": 39.99,
-      "age": "12-36 months",
-      "img": "https://example.com/images/ball_pit.jpg"
-    },
-    {
-      "id": 20,
-      "name": "Play Kitchen",
-      "category": "Pretend Play",
-      "brand": "KidKraft",
-      "price": 119.99,
-      "age": "24-36 months",
-      "img": "https://example.com/images/play_kitchen.jpg"
     }
   ]
-  
 }

@@ -9,6 +9,8 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import ErrorPage from "../pages/ErrorPage";
 import ToyDetails from "../pages/ToyDetails";
 import AllProducts from "../pages/AllProducts";
+import AddProducts from "../pages/AddProducts";
+import EditProduct from "../pages/EditProduct";
 // import PrivateRoute from "./private/PrivateRoute";
 
  export const router = createBrowserRouter([
@@ -54,6 +56,17 @@ import AllProducts from "../pages/AllProducts";
           path: "/dashboard/all-products",
           element:<AllProducts/>
         },
+        {
+          path: "/dashboard/add-products",
+          element:<AddProducts/>
+        },
+        {
+          path: "/dashboard/edit-product/:id",
+          element:<EditProduct/>,
+          loader:({params})=>
+            fetch(`http://localhost:3000/toys/${params.id}`),
+        },
+       
       ]
     },
   ]);
