@@ -1,9 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleLogin from "../components/login-registration/GoogleLogin";
-
+import useAuth from "../hooks/useAuth";
+import { useEffect } from "react";
 
 
 const Login = () => {
+  const {signIn, user} = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location?.state?.from?.pathname || '/home'
+  const handleSubmit= async(e)=>{
+    e.preventDefault();
+
+    const form = e.target;
+ const email = form.email.value;
+ const password = form.password.value;
+ console.log(email, password);
+  await signIn(email,password);
+ }  
+
+useEffect(()=>{
+  if(user){
+    navigate(from,{replace:true})
+  }
+},[user,navigate,from])
+
+  }
     return (
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -12,7 +35,7 @@ const Login = () => {
             <p className="py-6">We are the world’s largest toy company.We inspire and develop the builders of tomorrow.We shape your imagination.Here you can be anything.</p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleSubmit} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>

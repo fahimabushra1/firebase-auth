@@ -12,7 +12,7 @@ import AllProducts from "../pages/AllProducts";
 import AddProducts from "../pages/dashboard/AddProducts";
 import EditProduct from "../pages/EditProduct";
 import ProductDetail from "../pages/ProductDetail";
-// import PrivateRoute from "./private/PrivateRoute";
+import PrivateRoute from "./private/PrivateRoute";
 
  export const router = createBrowserRouter([
     {
@@ -21,7 +21,7 @@ import ProductDetail from "../pages/ProductDetail";
       errorElement:<ErrorPage/>,
       children:[
         {
-          path: "/",
+          path: "/home",
           element: <Home/>,
           loader:()=> fetch("http://localhost:3000/toys"),
         },
@@ -50,12 +50,18 @@ import ProductDetail from "../pages/ProductDetail";
       errorElement:<ErrorPage/>,
       children:[
         {
-          path: "",
-          element:<Dashboard/>
+         path: "",
+          element:
+          <PrivateRoute>
+          <Dashboard/>
+          </PrivateRoute>
         },
         {
           path: "/dashboard/all-products",
-          element:<AllProducts/>
+          element:
+          <PrivateRoute>
+            <AllProducts/>
+          </PrivateRoute>
         },
         {
           path: "/dashboard/add-products",
