@@ -26,7 +26,7 @@ const Statics = () => {
           <div className="stat-figure text-secondary">
             <div className="avatar online">
               <div className="w-16 rounded-full">
-                <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src="https://tse2.mm.bing.net/th?id=OIP.eCrcK2BiqwBGE1naWwK3UwHaHa&pid=Api&P=0&h=220" />
               </div>
             </div>
           </div>

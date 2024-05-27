@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 
-const ToyDetails = () => {
-    const toy = useLoaderData();
-    console.log(toy)
+const ProductDetail = () => {
+ const toy = useLoaderData();
+ console.log(toy)
     const {id,name,brand,category,price,age,img} = toy
     return (
         <div className="flex justify-center items-center my-16 p-4">
@@ -23,4 +23,4 @@ const ToyDetails = () => {
     );
 };
 
-export default ToyDetails;
+export default ProductDetail;

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import GoogleLogin from "../components/login-registration/GoogleLogin";
 
 
 
@@ -7,7 +9,7 @@ const Login = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <p className="py-6">We are the world’s largest toy company.We inspire and develop the builders of tomorrow.We shape your imagination.Here you can be anything.</p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form className="card-body">
@@ -29,6 +31,14 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
               </div>
+              <div className="mt-6">
+          <GoogleLogin/>
+        </div>
+        <div>
+          <p>
+            New here?<Link to='/register'className="text-red-500" > Register</Link>
+          </p>
+        </div>
             </form>
           </div>
         </div>

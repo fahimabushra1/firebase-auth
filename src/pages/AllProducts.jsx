@@ -3,42 +3,28 @@ import SingleProduct from "../components/dashboard/SingleProduct";
 
 
 const AllProducts = () => {
-    const [products, setProducts] = useState();
+  const [toyProducts,setToyProducts] = useState();
 
-    useEffect(()=>{
-fetch("http://localhost:3000/toys/")
-.then(res=>res.json())
-.then(data=>setProducts(data));
-    },[]);
+  useEffect(()=>{
+    fetch("http://localhost:3000/toys/")
+    .then(res=>res.json())
+    .then(data=>setToyProducts(data));
+        },[]);
 
+        const handleDeleteProduct = (id) =>{
+                setToyProducts(toyProducts.filter((toyProduct) => toyProduct.id!==id))
+              }
 
-    const handleDeleteProduct = (id) =>{
-      setProducts(products.filter((product) => product.id!==id))
-    }
-    return (
-        <>
-            <h1 className="text-5xl text-center text-blue-500 my-8 font-bold">All Products</h1>
-          <div className="overflow-x-auto">
-            <table className="table">
-              {/* head */}
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Brand</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                  </tr>
-                </thead>
-            <tbody>
-                {
-                    products?.map((product)=><SingleProduct key={product?.id} product={product} onDelete={handleDeleteProduct}/>)
-                }
-            </tbody>
-            </table>
-          </div>
-        </>
-    );
+  return (
+    <div>
+      <h1 className="text-5xl text-center text-blue-500 my-8 font-bold">All Products</h1>
+<div className=" flex justify-center items-center justify-items-stretch flex-wrap gap-4 px-6">
+  {
+    toyProducts?.map((toyProduct) =><SingleProduct key ={toyProduct.id} toyProduct= {toyProduct} onDelete={handleDeleteProduct}/>)
+  }
+</div>
+    </div>
+  );
 };
 
 export default AllProducts;

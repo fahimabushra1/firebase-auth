@@ -1,4 +1,4 @@
-
+import Swal from 'sweetalert2'
 const AddProducts = () => {
     const handleSubmit= async (e)=>{
         e.preventDefault();
@@ -10,14 +10,22 @@ const AddProducts = () => {
      const category = form.category.value;
      console.log(name,brand,price,category);
 
-     await fetch("http://localhost:3000/toys/",{
+     await fetch("http://localhost:3000/toys",{
         method: "POST",
         headers: {
             "Content-type": "application/json"
         },
         body: JSON.stringify(data),})
         .then((res) =>res.json())
-        .then((data) =>console.log(data))
+        .then((result) =>console.log(result))
+        if(data){
+          Swal.fire({
+            title: 'warning!',
+            text: 'All data are not included',
+            icon: 'qwarning',
+            confirmButtonText: 'Cool'
+          })
+        }
       }
         return (
         <div>

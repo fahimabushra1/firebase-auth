@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const EditProduct = () => {
     const toy = useLoaderData();
+    console.log(toy)
+    const [name,setName]= useState(toy?.name);
+    const [brand,setBrand]= useState(toy?.brand);
+    const [price,setPrice]= useState(toy?.price);
+    const [category,setCategory]= useState(toy.Category);
+
     const handleSubmit= async (e)=>{
         e.preventDefault();
     
@@ -20,6 +28,14 @@ const EditProduct = () => {
         body: JSON.stringify(data),})
         .then((res) =>res.json())
         .then((data) =>console.log(data))
+        if(!data){
+          Swal.fire({
+            title: 'warning!',
+            text: 'All data are not included',
+            icon: 'warning',
+            confirmButtonText: 'Cool'
+          })
+        }
       }
         return (
         <div>
@@ -31,25 +47,27 @@ const EditProduct = () => {
               <label className="label">
                 <span className="label-text">Name</span>
               </label>
-              <input type="text" name="productName" placeholder="product name" className="input input-bordered" required />
+              <input type="text" name="productName" placeholder="product name"
+              value= {name}  onChange={(e)=>setName(e.target.value)}className="input input-bordered" required />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Brand Name</span>
               </label>
-              <input type="text" name="brandName" placeholder="brand name" className="input input-bordered" required />
+              <input type="text" name="brandName" placeholder="brand name" value ={brand}  onChange={(e)=>setBrand(e.target.value)} className="input input-bordered" required />
               </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Price</span>
               </label>
-              <input type="number" name="price" placeholder="price" className="input input-bordered" required />
+              <input type="number" name="price" placeholder="price" value={price}  onChange={(e)=>setPrice(e.target.value)} className="input input-bordered" required />
               </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Category Name</span>
               </label>
-              <input type="text" name="category" placeholder="category" className="input input-bordered" required />
+              <input type="text" name="category" placeholder="category" value={category} 
+              onChange={(e)=>setCategory(e.target.value)} className="input input-bordered" required />
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Update</button>
