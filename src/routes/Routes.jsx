@@ -21,7 +21,7 @@ import PrivateRoute from "./private/PrivateRoute";
       errorElement:<ErrorPage/>,
       children:[
         {
-          path: "/home",
+          path: "/",
           element: <Home/>,
           loader:()=> fetch("http://localhost:3000/toys"),
         },

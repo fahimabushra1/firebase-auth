@@ -23,6 +23,7 @@ const handleSubmit= (e)=>{
   const confirmPassword = form.confirmPassword.value;
   console.log(name,email,password,confirmPassword)
 
+
   if(passMatch != confirmPassword){
     setPassMatch(false);
   }

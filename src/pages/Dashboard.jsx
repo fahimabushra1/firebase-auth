@@ -8,9 +8,8 @@ const Dashboard = () => {
   const {user}= useAuth();
   const [users,setUsers] = useState();
 
-    if(user){
-     return setUsers(user);
-    }
+     setUsers(user);
+    
   
   console.log(user,users)
 
