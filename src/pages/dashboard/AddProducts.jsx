@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2'
-import './styles.css'
+// import './styles.css'
 
 const AddProducts = () => {
     const handleSubmit= async (e)=>{

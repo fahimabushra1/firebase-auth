@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-import './styles.css'
+// import './styles.css'
 
 const EditProduct = () => {
     const toy = useLoaderData();

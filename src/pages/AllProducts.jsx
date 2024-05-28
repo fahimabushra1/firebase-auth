@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SingleProduct from "../components/dashboard/SingleProduct";
 import Swal from 'sweetalert2'
-import './styles.css'
+// import './styles.css'
 
 
 const AllProducts = () => {

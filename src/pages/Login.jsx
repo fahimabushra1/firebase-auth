@@ -8,16 +8,16 @@ const Login = () => {
   const {signIn, user} = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-console.log(user.email)
+console.log(user?.email)
   const from = location?.state?.from?.pathname || '/home'
-  const handleSubmit= async(e)=>{
+  const handleSubmit= (e)=>{
     e.preventDefault();
 
     const form = e.target;
  const email = form.email.value;
  const password = form.password.value;
  console.log(email, password);
-  await signIn(email,password);
+  signIn(email,password);
  }  
 
 useEffect(()=>{
@@ -40,13 +40,13 @@ useEffect(()=>{
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="email" className="input input-bordered" required />
+                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" placeholder="password" className="input input-bordered" required />
+                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
