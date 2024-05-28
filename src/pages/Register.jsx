@@ -4,7 +4,8 @@ import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 
 const Register = () => {
-  const {createUser}= useAuth();
+  const {createUser,user}= useAuth();
+  console.log
 const [passMatch, setPassMatch]= useState();
 
  const navigate = useNavigate();
@@ -12,7 +13,7 @@ const [passMatch, setPassMatch]= useState();
 
   const from = location?.state?.from?.pathname || '/home'
 
-const handleSubmit=e=>{
+const handleSubmit= async (e)=>{
   e.preventDefault();
 
   const form = e.target;

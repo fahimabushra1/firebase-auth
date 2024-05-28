@@ -1,11 +1,18 @@
 
+import { useState } from "react";
 import SingleUser from "../components/dashboard/SingleUser";
 import useAuth from "../hooks/useAuth";
 
 
 const Dashboard = () => {
   const {user}= useAuth();
-  console.log(user)
+  const [users,setUsers] = useState();
+
+    if(user){
+     return setUsers(user);
+    }
+  
+  console.log(user,users)
 
     return (
         <>
@@ -22,8 +29,8 @@ const Dashboard = () => {
                 </thead>
             <tbody>
                {
-                user?.map((c)=>
-                  (<SingleUser key={c?.id} c={c} />))
+                users?.map((u)=>
+                  (<SingleUser key={u?.id} u={u} />))
                }
             </tbody>
             </table>

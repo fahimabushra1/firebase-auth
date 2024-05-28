@@ -8,7 +8,7 @@ const Login = () => {
   const {signIn, user} = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-
+console.log(user.email)
   const from = location?.state?.from?.pathname || '/home'
   const handleSubmit= async(e)=>{
     e.preventDefault();
@@ -26,7 +26,7 @@ useEffect(()=>{
   }
 },[user,navigate,from])
 
-  }
+
     return (
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -55,7 +55,7 @@ useEffect(()=>{
                 <button className="btn btn-primary">Login</button>
               </div>
               <div className="mt-6">
-          <GoogleLogin/>
+         <GoogleLogin/>
         </div>
         <div>
           <p>

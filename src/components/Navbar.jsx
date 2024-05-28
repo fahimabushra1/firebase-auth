@@ -5,7 +5,12 @@ import useAuth from "../hooks/useAuth";
 
 const Navbar = () => {
   const {logout, user}= useAuth();
-    return (
+
+  const handleLogout = async ()=>{
+    await logout()
+  }
+    
+        return (
        <>
         <div className="navbar bg-base-100">
         <div className="navbar-start">
@@ -28,7 +33,7 @@ const Navbar = () => {
               user && (
                 <div>
                       <li><Link to='/dashboard'>Dashboard</Link></li>
-              <li><Link to='/logout'>Logout</Link></li>
+              <li><button onClick={handleLogout}>Logout</button></li>
                 </div>
               )
              }
@@ -46,7 +51,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div><Link to='/logout' className="btn text-blue-500 font-bold">Logout</Link></div>
+          <div><button onClick={handleLogout} className="btn text-blue-500 font-bold">Logout</button></div>
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component" src="https://tse2.mm.bing.net/th?id=OIP.eCrcK2BiqwBGE1naWwK3UwHaHa&pid=Api&P=0&h=220" />

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import './styles.css'
 
 const EditProduct = () => {
     const toy = useLoaderData();
@@ -28,14 +29,26 @@ const EditProduct = () => {
         body: JSON.stringify(data),})
         .then((res) =>res.json())
         .then((data) =>console.log(data))
-        if(!data){
-          Swal.fire({
-            title: 'warning!',
-            text: 'All data are not included',
-            icon: 'warning',
-            confirmButtonText: 'Cool'
-          })
-        }
+        Swal.fire({
+          title: 'Do you want to update data?',
+          showDenyButton: true,
+          showCancelButton: true,
+          confirmButtonText: 'Yes',
+          denyButtonText: 'No',
+          customClass: {
+            actions: 'my-actions',
+            cancelButton: 'order-1 right-gap',
+            confirmButton: 'order-2',
+            denyButton: 'order-3',
+          },
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire('Saved!', '', 'success')
+          } else if (result.isDenied) {
+            Swal.fire('Changes are not saved', '', 'info')
+          }
+        })
+        
       }
         return (
         <div>
