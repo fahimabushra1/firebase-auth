@@ -11,7 +11,7 @@ const [passMatch, setPassMatch]= useState();
  const navigate = useNavigate();
   const location = useLocation();
 
-  const from = location?.state?.from?.pathname || '/home'
+  const from = location?.state?.from?.pathname || '/'
 
 const handleSubmit= (e)=>{
   e.preventDefault();
@@ -25,7 +25,7 @@ const handleSubmit= (e)=>{
 
 
   if(passMatch != confirmPassword){
-    setPassMatch(false);
+    setPassMatch(true);
   }
 
   if(password==confirmPassword){
@@ -67,13 +67,11 @@ const handleSubmit= (e)=>{
      </label>
      <input type="password" name="confirmPassword" placeholder="confirm password" className="input input-bordered" required />
      {
-       !passMatch &&(
-         <div className="my-2">
+       passMatch &&
+         (<div className="my-2">
            <p className="text-red-500">Passwords do not match</p>
-         </div>
-       )
-         
-     }
+         </div>)
+      }
      <label className="label">
        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
      </label>

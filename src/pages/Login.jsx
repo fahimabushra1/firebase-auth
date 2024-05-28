@@ -9,7 +9,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 console.log(user?.email)
-  const from = location?.state?.from?.pathname || '/home'
+  const from = location?.state?.from?.pathname || '/'
   const handleSubmit= (e)=>{
     e.preventDefault();
 
