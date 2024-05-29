@@ -1,6 +1,33 @@
 {
   "toys": [
     {
+      "id": 1,
+      "name": "Stacking Rings",
+      "category": "Educational",
+      "brand": "Fisher-Price",
+      "price": 12.99,
+      "babyAge": "6-12 months",
+      "img": "https://m.media-amazon.com/images/I/61RbsqvCXbL._SL1500_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Soft Blocks",
+      "category": "Building",
+      "brand": "Melissa & Doug",
+      "price": 24.99,
+      "babyAge": "6-24 months",
+      "img": "https://tse3.mm.bing.net/th?id=OIP.Fq-hLMJ_VgQYRSUC5PD_gAHaHa&pid=Api&P=0&h=220"
+    },
+    {
+      "id": 3,
+      "name": "Musical Toy Drum",
+      "category": "Musical",
+      "brand": "VTech",
+      "price": 19.99,
+      "babyAge": "9-24 months",
+      "img": "https://i5.walmartimages.com/asr/8288edf6-9752-4d5b-977a-3069520b0ee4_1.edeea1398d90f55277b5f485b33d215c.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff"
+    },
+    {
       "id": "4",
       "name": "Activity Gym",
       "category": "Activity",
@@ -107,6 +134,42 @@
       "price": 44.99,
       "age": "0-6 months",
       "img": "https://tse3.mm.bing.net/th?id=OIP.JN-0yhv-y9Ln5BVCSYDRrQHaHa&pid=Api&P=0&h=220"
+    },
+    {
+      "id": 17,
+      "name": "Crib Toy",
+      "category": "Nursery",
+      "brand": "Fisher-Price",
+      "price": 29.99,
+      "babyAge": "0-12 months",
+      "img": "https://i5.walmartimages.com/asr/1bf22d9d-4026-4ccb-a850-6d4a5342e5bb_1.bc232e156af61657ce40f25ea49df102.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff"
+    },
+    {
+      "id": 18,
+      "name": "Rattle",
+      "category": "Teething",
+      "brand": "Fisher-Price",
+      "price": 8.99,
+      "babyAge": "0-6 months",
+      "img": "https://tse4.mm.bing.net/th?id=OIP.Dg8HQfChhM6eQlFWpFESCgHaHa&pid=Api&P=0&h=220"
+    },
+    {
+      "id": 19,
+      "name": "Ball Pit",
+      "category": "Activity",
+      "brand": "Intex",
+      "price": 39.99,
+      "babyAge": "12-36 months",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/71OMVZEqy2L._AC_SL1000_.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Play Kitchen",
+      "category": "Pretend Play",
+      "brand": "KidKraft",
+      "price": 119.99,
+      "babyAge": "24-36 months",
+      "img": "https://secure.img.wfcdn.com/lf/maxsquare/hash/4442/27947893/1/Little-Chef-Wooden-Play-Kitchen-with-Accessories-TD-11708A.jpg"
     }
   ]
 }

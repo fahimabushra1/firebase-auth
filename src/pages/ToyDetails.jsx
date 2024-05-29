@@ -13,7 +13,7 @@ const ToyDetails = () => {
     <p className="text-xl">Brand: {brand}</p>
     <p className="text-xl">Category: {category}</p>
     <p className="text-xl">Price: {price}$</p>
-    <p className="text-xl">Useful for {age} babies.</p>
+    <p className="text-xl">Useful for {age} babies:</p>
     <div className="card-actions justify-end">
       <button className="btn btn-primary mt-4">Buy Now</button>
     </div>
