@@ -107,15 +107,6 @@
       "price": 44.99,
       "age": "0-6 months",
       "img": "https://tse3.mm.bing.net/th?id=OIP.JN-0yhv-y9Ln5BVCSYDRrQHaHa&pid=Api&P=0&h=220"
-    },
-    {
-      "id": "17",
-      "name": "Crib Toy",
-      "category": "Nursery",
-      "brand": "Fisher-Price",
-      "price": 29.99,
-      "age": "0-12 months",
-      "img": "https://www.caseystoys.com.au/cache/eef164f27249ad32900834df5d0aab52_thumb.jpg"
     }
   ]
 }

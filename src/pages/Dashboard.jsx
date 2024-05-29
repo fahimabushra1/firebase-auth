@@ -7,8 +7,10 @@ import useAuth from "../hooks/useAuth";
 const Dashboard = () => {
   const {user}= useAuth();
   const [users,setUsers] = useState();
-
-     setUsers(user);
+  
+ const showUsers =()=>{
+  return setUsers(user);
+ } 
     
   
   console.log(user,users)

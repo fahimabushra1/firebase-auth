@@ -9,7 +9,7 @@ const EditProduct = () => {
     const [name,setName]= useState(toy?.name);
     const [brand,setBrand]= useState(toy?.brand);
     const [price,setPrice]= useState(toy?.price);
-    const [category,setCategory]= useState(toy.Category);
+    const [category,setCategory]= useState(toy?.Category);
 
     const handleSubmit= async (e)=>{
         e.preventDefault();

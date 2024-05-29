@@ -52,9 +52,9 @@ import PrivateRoute from "./private/PrivateRoute";
         {
          path: "",
           element:
-          // <PrivateRoute>
+          <PrivateRoute>
           <Dashboard/>
-          // </PrivateRoute>
+          </PrivateRoute>
         },
         {
           path: "/dashboard/all-products",
