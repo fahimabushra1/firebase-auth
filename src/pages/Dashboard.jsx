@@ -21,6 +21,8 @@ const Dashboard = () => {
                     <th>ID</th>
                     <th>Name</th>
                     <th>Mail Address</th>
+                    <th>Last Login Time</th>
+                    <th>Access Token</th>
                   </tr>
                 </thead>
             <tbody>
