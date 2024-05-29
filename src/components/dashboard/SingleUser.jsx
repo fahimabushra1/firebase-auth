@@ -1,13 +1,13 @@
 
-const SingleUser = ({u}) => {
-    console.log(u)
+const SingleUser = ({user}) => {
+    console.log(user)
     return (
         <tr className="bg-base-200">
-        <th>{u.id} </th>
+        <th>{user.id} </th>
         <td>
-          {u.displayName}
+          {user.displayName}
         </td>
-        <td>{u.email}</td>
+        <td>{user.email}</td>
       </tr>
     );
 };

@@ -20,6 +20,9 @@ const AddProducts = () => {
         body: JSON.stringify(data),})
         .then((res) =>res.json())
         .then((result) =>console.log(result))
+        .catch((err) => {
+          console.log(err.message);
+       });
         Swal.fire({
           title: 'Do you want to add data?',
           showDenyButton: true,
